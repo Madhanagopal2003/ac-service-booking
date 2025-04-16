@@ -35,25 +35,7 @@ body {
     background-color: #b71c1c;
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-  }
   
-  th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #e3f2fd;
-    font-weight: bold;
-    color: #0d47a1;
-  }
   
   tr:nth-child(even) {
     background-color: #fafafa;
@@ -64,35 +46,64 @@ body {
     font-size: 16px;
   }
   
-  /* Mobile responsive styles */
-  @media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-  
-    th {
-      background: #0d47a1;
-      color: white;
-    }
-  
-    td {
-      border: none;
-      border-bottom: 1px solid #ddd;
-      position: relative;
-      padding-left: 50%;
-    }
-  
-    td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      font-weight: bold;
-      color: #333;
-    }
-  
-    tr {
-      margin-bottom: 20px;
-    }
+  /* Base table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
   }
-  
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+    width: 40%;
+    flex-shrink: 0;
+  }
+}
