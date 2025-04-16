@@ -1,0 +1,98 @@
+/* admin.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #0d47a1;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  #logoutBtn {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #logoutBtn:hover {
+    background-color: #b71c1c;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #e3f2fd;
+    font-weight: bold;
+    color: #0d47a1;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  #bookingsTable {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th {
+      background: #0d47a1;
+      color: white;
+    }
+  
+    td {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+  
+    tr {
+      margin-bottom: 20px;
+    }
+  }
+  
