@@ -122,32 +122,21 @@
       background-color: #6a1b9a;
     }
 
-    footer {
-      width: 100%;
-      background-color: #0d47a1;
-      text-align: center;
-      padding: 15px 0;
-      color: white;
-    }
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
 
-    .footer-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .footer-nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .footer-nav a:hover {
-      color: #ffeb3b;
-      text-decoration: underline;
-    }
+footer p {
+    margin: 0;
+}
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -248,12 +237,10 @@
   <nav>
     <div class="nav-title">AC Service</div>
     <div class="nav-links">
-      <!-- <nav class="footer-nav"> -->
         <a href="#">🏠 Home</a>
         <a href="#bookingForm">📋 Services</a>
         <a href="tel:+919999999999">📞 Contact</a>
         <a href="admin.html">🔐 Admin</a>
-      </nav>
     </div>
   </nav>
 
@@ -306,13 +293,10 @@
   </main>
 
   <footer>
-    <!-- <nav class="footer-nav">
-      <a href="#">🏠 Home</a>
-      <a href="#bookingForm">📋 Services</a>
-      <a href="tel:+919999999999">📞 Contact</a>
-      <a href="admin.html">🔐 Admin</a>
-    </nav> -->
-  </footer>
+  <p>&copy; 2025 Your AC Service. All rights reserved.</p>
+  <p>Providing high-quality air conditioning services just for you!</p>
+</footer>
+
 
   <script>
     document.getElementById('bookingForm').addEventListener('submit', async function (e) {
