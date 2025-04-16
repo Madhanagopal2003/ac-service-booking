@@ -89,6 +89,14 @@
       box-shadow: 0 0 5px rgba(66, 165, 245, 0.5);
     }
 
+    .input-wrapper label {
+  display: block;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+
     button {
       background: #0d47a1;
       color: #fff;
@@ -280,7 +288,11 @@ footer p {
         <option value="AC Service">AC Service</option>
         <option value="AC Installation">AC Installation</option>
       </select>
-      <input type="datetime-local" name="datetime" placeholder="Date & Time" required>
+      <div class="input-wrapper">
+  <label for="datetime">Date & Time</label>
+  <input type="datetime-local" id="datetime" name="datetime" required>
+</div>
+
       <button type="submit">📅 Book Now</button>
     </form>
 
