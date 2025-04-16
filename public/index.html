@@ -148,6 +148,17 @@
       color: #ffeb3b;
       text-decoration: underline;
     }
+
+    .feature-box {
+      flex: 1;
+      min-width: 250px;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -157,55 +168,6 @@
       from { opacity: 0; transform: translateX(-50px); }
       to { opacity: 1; transform: translateX(0); }
     }
-    .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
-  background-color: #f7f7f7;
-}
-
-.feature-box {
-  flex: 1 1 300px;
-  max-width: 350px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.feature-box:hover {
-  transform: translateY(-5px);
-}
-
-.feature-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  object-fit: cover;
-}
-
-.feature-box h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.feature-box p {
-  font-size: 16px;
-  color: #666;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .feature-box {
-    max-width: 100%;
-  }
-}
 
     .hero {
       text-align: center;
@@ -215,8 +177,16 @@
     .hero img {
       width: 100%;
       max-width: 500px;
-      margin: 0;
+      margin: 20px 0;
       border-radius: 10px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
     }
 
     @media (max-width: 768px) {
@@ -231,7 +201,10 @@
         margin-top: 10px;
       }
 
-      
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
 
       .hero h1 {
         font-size: 1.8em;
@@ -239,6 +212,10 @@
 
       .hero p {
         font-size: 1em;
+      }
+
+      .hero img {
+        max-width: 90%;
       }
     }
   </style>
@@ -262,21 +239,19 @@
     <section class="hero">
       <h1>Fast & Reliable AC Service</h1>
       <p>We provide professional air conditioning cleaning, repair, and installation services at your doorstep.</p>
+      <img src="https://img.freepik.com/free-vector/air-conditioning-service_23-2148544954.jpg" alt="AC Service">
     </section>
 
     <section class="features">
       <div class="feature-box">
-        <img src="https://media.gettyimages.com/id/1387280304/photo/cleaning-the-air-conditioner-filter.jpg?s=612x612&w=0&k=20&c=1mIfYcvbhhCI3hl2934fJOgiqCdFMGzCSOGqMIAmyMA=" alt="AC cleaning">
         <h3>🧼 AC Cleaning</h3>
         <p>Deep cleaning to keep your AC running smoothly and your air fresh.</p>
       </div>
       <div class="feature-box">
-        <img src="https://media.gettyimages.com/id/1308375294/photo/technician-repairing-air-conditioner.jpg?s=612x612&w=0&k=20&c=BZIkJ9qarD6s94uWQauL4q88Ft65kp7xENsUBMrIfjU=" alt="AC Service">
-        <h3>🛠️ AC Service</h3>
-        <p>Quick and efficient services by certified technicians.</p>
+        <h3>🛠️ AC Repair</h3>
+        <p>Quick and efficient repair services by certified technicians.</p>
       </div>
       <div class="feature-box">
-        <img src="https://media.gettyimages.com/id/1845629098/photo/technician-checking-air-conditioning-unit.jpg?s=612x612&w=0&k=20&c=CSRpQCdvyNskzJr7Z-2zZKxYn7Vtdbgd87fjpy8mbJE=" alt="AC Installation">
         <h3>🔧 Installation</h3>
         <p>We install all AC types including split, window, and central units.</p>
       </div>
@@ -290,7 +265,7 @@
       <input type="text" name="address" placeholder="Address" required>
       <select name="service">
         <option value="AC Cleaning">AC Cleaning</option>
-        <option value="AC Repair">AC Service</option>
+        <option value="AC Repair">AC Repair</option>
         <option value="Installation">Installation</option>
       </select>
       <input type="datetime-local" name="datetime" required>
